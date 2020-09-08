@@ -6,7 +6,6 @@ import de.koudingspawn.vault.crd.VaultSpec;
 import de.koudingspawn.vault.vault.TypedSecretGenerator;
 import de.koudingspawn.vault.vault.VaultCommunication;
 import de.koudingspawn.vault.vault.VaultSecret;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
 import de.koudingspawn.vault.vault.impl.dockercfg.PullSecret;
 import org.springframework.stereotype.Component;
 

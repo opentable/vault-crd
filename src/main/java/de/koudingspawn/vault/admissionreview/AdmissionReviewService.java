@@ -1,18 +1,16 @@
 package de.koudingspawn.vault.admissionreview;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import de.koudingspawn.vault.crd.Vault;
 import de.koudingspawn.vault.vault.VaultService;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
 import io.fabric8.kubernetes.api.model.Status;
 import io.fabric8.kubernetes.api.model.StatusBuilder;
 import io.fabric8.kubernetes.api.model.admission.AdmissionRequest;
 import io.fabric8.kubernetes.api.model.admission.AdmissionResponse;
 import io.fabric8.kubernetes.api.model.admission.AdmissionResponseBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
-@Service
 public class AdmissionReviewService {
 
     private static final Logger log = LoggerFactory.getLogger(AdmissionReviewService.class);

@@ -9,7 +9,6 @@ import de.koudingspawn.vault.crd.VaultSpec;
 import de.koudingspawn.vault.vault.TypedSecretGenerator;
 import de.koudingspawn.vault.vault.VaultCommunication;
 import de.koudingspawn.vault.vault.VaultSecret;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
 import de.koudingspawn.vault.vault.impl.properties.VaultJinjaLookup;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +26,7 @@ public class PropertiesGenerator implements TypedSecretGenerator {
     }
 
     @Override
-    public VaultSecret generateSecret(Vault resource) throws SecretNotAccessibleException {
+    public VaultSecret generateSecret(Vault resource) {
         VaultPropertiesConfiguration propertiesConfiguration = resource.getSpec().getPropertiesConfiguration();
 
         if (propertiesConfiguration != null && propertiesConfiguration.getFiles() != null) {

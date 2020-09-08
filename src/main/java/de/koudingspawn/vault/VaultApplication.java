@@ -1,14 +1,15 @@
 package de.koudingspawn.vault;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication
+import com.opentable.credentials.client.api.EnableCredentialsClient;
+import com.opentable.server.OTApplication;
+
 @EnableScheduling
+@EnableCredentialsClient
 public class VaultApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VaultApplication.class, args);
+		OTApplication.run(VaultApplication.class, args);
 	}
 }

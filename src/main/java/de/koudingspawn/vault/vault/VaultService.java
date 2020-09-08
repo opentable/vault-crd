@@ -1,7 +1,7 @@
 package de.koudingspawn.vault.vault;
 
 import de.koudingspawn.vault.crd.Vault;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
+
 import org.springframework.stereotype.Component;
 
 @Component

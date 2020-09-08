@@ -3,7 +3,7 @@ package de.koudingspawn.vault.kubernetes;
 import de.koudingspawn.vault.crd.Vault;
 import de.koudingspawn.vault.vault.VaultSecret;
 import de.koudingspawn.vault.vault.VaultService;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

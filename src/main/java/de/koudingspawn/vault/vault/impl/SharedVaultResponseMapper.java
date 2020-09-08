@@ -4,7 +4,6 @@ import de.koudingspawn.vault.Constants;
 import de.koudingspawn.vault.crd.VaultJKSConfiguration;
 import de.koudingspawn.vault.crd.VaultType;
 import de.koudingspawn.vault.vault.VaultSecret;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
 import de.koudingspawn.vault.vault.impl.pki.VaultResponseData;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

@@ -4,7 +4,6 @@ import de.koudingspawn.vault.crd.DoneableVault;
 import de.koudingspawn.vault.crd.Vault;
 import de.koudingspawn.vault.crd.VaultList;
 import de.koudingspawn.vault.kubernetes.EventHandler;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
 import io.fabric8.kubernetes.client.dsl.MixedOperation;
 import io.fabric8.kubernetes.client.dsl.Resource;
 import org.slf4j.Logger;
@@ -12,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import com.opentable.credentials.client.api.exceptions.CredentialsManagementException;
 
 @Component
 @Profile("!test")
@@ -43,7 +44,7 @@ public class ScheduledRefresh {
                 if (requiresRefresh.refreshIsNeeded(resource)) {
                     eventHandler.modifyHandler(resource);
                 }
-            } catch (SecretNotAccessibleException e) {
+            } catch (CredentialsManagementException e) {
                 log.info("Refresh of secret {} in namespace {} failed with exception", resource.getMetadata().getName(), resource.getMetadata().getNamespace(), e);
             }
         }

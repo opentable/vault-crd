@@ -1,7 +1,6 @@
 package de.koudingspawn.vault.vault.impl.properties;
 
 import de.koudingspawn.vault.vault.VaultCommunication;
-import de.koudingspawn.vault.vault.communication.SecretNotAccessibleException;
 
 import java.util.HashMap;
 import java.util.Optional;
